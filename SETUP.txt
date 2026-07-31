@@ -9,6 +9,10 @@ winget install --id Python.Python.3.12
 2. Double-click start-widget.bat
    First run sets itself up automatically, then starts the server.
 
+   Optional: right-click create-shortcut.ps1 -> Run with PowerShell
+   to add a "Tidal Now Playing" icon to your Desktop that launches
+   the widget minimized (no console window).
+
 3. In OBS, add a Browser Source pointing to:
 
 http://127.0.0.1:5959/overlay.html

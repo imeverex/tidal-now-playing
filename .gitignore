@@ -1,0 +1,4 @@
+.venv/
+current_art.png
+*.zip
+__pycache__/

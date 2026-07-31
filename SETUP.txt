@@ -1,0 +1,14 @@
+Tidal Now Playing Widget - setup on a new PC
+
+1. Install Python 3.12 (only needed once per machine):
+
+winget install --id Python.Python.3.12
+
+   (type Y if it asks to accept agreements)
+
+2. Double-click start-widget.bat
+   First run sets itself up automatically, then starts the server.
+
+3. In OBS, add a Browser Source pointing to:
+
+http://127.0.0.1:5959/overlay.html

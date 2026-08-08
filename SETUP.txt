@@ -16,3 +16,6 @@ winget install --id Python.Python.3.12
 3. In OBS, add a Browser Source pointing to:
 
 http://127.0.0.1:5959/overlay.html
+
+   Set Width to at least 350 and Height to 150. Going narrower than
+   350 can clip the right edge of the widget on longer song titles.

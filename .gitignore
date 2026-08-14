@@ -2,3 +2,6 @@
 current_art.png
 *.zip
 __pycache__/
+build/
+dist/
+*.spec

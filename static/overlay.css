@@ -10,23 +10,38 @@
 
 body {
   background: transparent;
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: 'Poppins', -apple-system, "Segoe UI", system-ui, sans-serif;
   overflow: hidden;
 }
 
 .widget {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 14px;
   width: fit-content;
-  padding: 10px 20px 10px 10px;
-  background: rgba(0, 0, 0, 0.82);
-  border: 1px solid rgba(127, 214, 229, 0.35);
-  border-radius: 4px;
+  padding: 10px 26px 10px 20px;
+  background: rgba(0, 210, 255, 0.85);
+  border: none;
+  border-radius: 0;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* black content mask — leaves a solid cyan diagonal wedge showing on the right */
+.widget-mask {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.85);
+  clip-path: polygon(0 0, calc(100% - 24px) 0, calc(100% - 4px) 100%, 0 100%);
+}
+
+.widget > *:not(.widget-mask) {
+  position: relative;
+  z-index: 1;
 }
 
 .widget.hidden {
@@ -57,16 +72,17 @@ body {
 }
 
 .label {
-  color: #00d2ff;
-  font-size: 10px;
+  color: rgba(0, 210, 255, 0.65);
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 2px;
 }
 
 .title {
-  color: #ffffff;
+  color: #F0F4F7;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 600;
   white-space: nowrap;
@@ -76,6 +92,7 @@ body {
 
 .artist {
   color: #7fd6e5;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
   font-weight: 500;
   white-space: nowrap;

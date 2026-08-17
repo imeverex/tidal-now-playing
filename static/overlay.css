@@ -21,7 +21,7 @@ body {
   gap: 14px;
   width: fit-content;
   padding: 10px 26px 10px 20px;
-  background: #00D2FF;
+  background: rgba(0, 0, 0, 0.85);
   border: none;
   border-radius: 0;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
@@ -30,13 +30,13 @@ body {
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-/* black content mask — leaves a solid cyan diagonal wedge showing on the right */
+/* solid cyan wedge accent, layered on top of the black base at the right edge only */
 .widget-mask {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: rgba(0, 0, 0, 0.85);
-  clip-path: polygon(0 0, calc(100% - 24px) 0, calc(100% - 4px) 100%, 0 100%);
+  background: #00D2FF;
+  clip-path: polygon(calc(100% - 24px) 0, 100% 0, 100% 100%, calc(100% - 4px) 100%);
 }
 
 .widget > *:not(.widget-mask) {
